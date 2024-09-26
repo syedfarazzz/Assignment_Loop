@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Table</h1>
+
+    <label for="first">Which table you want to generate?</label>
+    <input type="number" name="first" id="1st" required> <br><br>
+
+    <label for="first">How many times do you want to multiply??</label>
+    <input type="number" name="second" id="2nd" required> <br><br>
+
+    <button onclick="table()">Generate</button>
+
+    <h2>Result:</h2>
+    <div id="res"></div>
+
+    <script>
+        function table() {
+            let num1 = document.getElementById('1st').value;
+            let num2 = document.getElementById('2nd').value;
+
+            let result = document.getElementById('res');
+            result.innerHTML= ""
+
+            for(let i=1; i<=num2 ; i++){
+                // console.log(`${num1} x ${i} = ${num1*i}`);
+                let line = `${num1} x ${i} = ${num1*i}<br>`
+                result.innerHTML += line;
+            }
+        }
+    </script>
+</body>
+
+</html>
